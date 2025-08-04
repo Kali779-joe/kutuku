@@ -1,25 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({super.key});
+class Dashboard extends StatelessWidget {
+  const Dashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
+          padding: EdgeInsets.symmetric(),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Center(
-                  child: Text(
-                    'Home',
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
-                  ),
+                Center(child: Text('Dashboard')),
+                ElevatedButton(
+                  onPressed: () {
+                    context.goNamed('login');
+                  },
+                  child: Text(''),
                 ),
               ],
             ),

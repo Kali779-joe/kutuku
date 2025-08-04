@@ -32,8 +32,7 @@ class AppTheme {
       colorScheme: ColorScheme.fromSeed(
         seedColor: primaryColor,
         brightness: Brightness.light,
-        background: backgroundColor,
-        surface: surfaceColor,
+        surface: backgroundColor,
         error: errorColor,
       ),
       scaffoldBackgroundColor: backgroundColor,
@@ -157,8 +156,7 @@ class AppTheme {
       colorScheme: ColorScheme.fromSeed(
         seedColor: primaryColor,
         brightness: Brightness.dark,
-        background: darkBackgroundColor,
-        surface: const Color(0xFF1A1625),
+        surface: darkBackgroundColor,
         error: errorColor,
       ),
       scaffoldBackgroundColor: darkBackgroundColor,

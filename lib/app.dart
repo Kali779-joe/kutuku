@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kutuku/views/statistics.dart';
-import 'package:kutuku/views/splash_screen.dart';
+import 'package:kutuku/router/app_router.dart';
 import 'package:kutuku/theme/app_theme.dart';
 
 class App extends StatelessWidget {
@@ -8,12 +7,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: appRouter,
       title: 'Kutuku',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: const SplashScreen(),
+
       debugShowCheckedModeBanner: false,
     );
   }
