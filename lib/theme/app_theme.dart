@@ -55,27 +55,19 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          textStyle: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
+          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: primaryColor,
-          textStyle: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-          ),
+          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: surfaceColor,
         elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -92,7 +84,10 @@ class AppTheme {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: errorColor, width: 2),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 16,
+        ),
       ),
       textTheme: const TextTheme(
         headlineLarge: TextStyle(
@@ -120,18 +115,9 @@ class AppTheme {
           fontWeight: FontWeight.w500,
           color: textColor,
         ),
-        bodyLarge: TextStyle(
-          fontSize: 16,
-          color: textColor,
-        ),
-        bodyMedium: TextStyle(
-          fontSize: 14,
-          color: textColor,
-        ),
-        bodySmall: TextStyle(
-          fontSize: 12,
-          color: lightTextColor,
-        ),
+        bodyLarge: TextStyle(fontSize: 16, color: textColor),
+        bodyMedium: TextStyle(fontSize: 14, color: textColor),
+        bodySmall: TextStyle(fontSize: 12, color: lightTextColor),
       ),
     );
   }
@@ -179,27 +165,19 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          textStyle: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
+          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: primaryColor,
-          textStyle: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-          ),
+          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: const Color(0xFF1A1625),
         elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -216,7 +194,10 @@ class AppTheme {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: errorColor, width: 2),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 16,
+        ),
       ),
       textTheme: const TextTheme(
         headlineLarge: TextStyle(
@@ -244,18 +225,9 @@ class AppTheme {
           fontWeight: FontWeight.w500,
           color: Colors.white,
         ),
-        bodyLarge: TextStyle(
-          fontSize: 16,
-          color: Colors.white70,
-        ),
-        bodyMedium: TextStyle(
-          fontSize: 14,
-          color: Colors.white70,
-        ),
-        bodySmall: TextStyle(
-          fontSize: 12,
-          color: Colors.white54,
-        ),
+        bodyLarge: TextStyle(fontSize: 16, color: Colors.white70),
+        bodyMedium: TextStyle(fontSize: 14, color: Colors.white70),
+        bodySmall: TextStyle(fontSize: 12, color: Colors.white54),
       ),
     );
   }
