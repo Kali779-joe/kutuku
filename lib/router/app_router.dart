@@ -9,12 +9,12 @@ import 'package:kutuku/views/profile_screen.dart';
 import 'package:kutuku/views/signup.dart';
 
 class AppRouter {
-  static const loginRoute = '/';
+  static const onboardingRoute = '/';
   static const homeRoute = '/home';
   static const aboutRoute = '/about';
   static const profileRoute = '/profile';
   static const dashboardRoute = '/dashboard';
-  static const onboardingRoute = '/onboarding';
+  static const loginRoute = '/login';
   static const signupRoute = '/signup';
 
   // ROUTES NAMES

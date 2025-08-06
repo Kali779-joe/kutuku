@@ -109,6 +109,13 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            context.pop('onboarding');
+          },
+
+          icon: Icon(Icons.arrow_back_ios),
+        ),
         title: const Text('Sign Up'),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -189,7 +196,7 @@ class _SignupState extends State<Signup> {
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey),
                         ),
-                        hintText: 'Enter Email',
+                        hintText: 'Enter Email or phone number',
                         filled: true,
                         fillColor: Colors.grey[200],
                         border: OutlineInputBorder(
@@ -292,29 +299,36 @@ class _SignupState extends State<Signup> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const Text('Already have an account? Login'),
+                          const Text(
+                            'Already have an account? Login',
+                            style: TextStyle(color: Colors.indigo),
+                          ),
                         ],
                       ),
                     ),
                     const SizedBox(height: 10),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 24,
-                          vertical: 12,
+                    SizedBox(
+                      width: double.infinity,
+                      height: 50,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 24,
+                            vertical: 12,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          backgroundColor: Colors.indigo,
                         ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        backgroundColor: Colors.indigo,
-                      ),
-                      onPressed: _submittingSignupForm,
-                      child: const Text(
-                        'Create Account',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
+                        onPressed: _submittingSignupForm,
+                        child: const Text(
+                          'Create Account',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
