@@ -1,10 +1,10 @@
 import 'package:go_router/go_router.dart';
+import 'package:kutuku/Onboarding/onboarding_screen.dart';
 import 'package:kutuku/views/about_screen.dart';
 import 'package:kutuku/views/dashboard.dart';
 import 'package:kutuku/views/home_screen.dart';
 import 'package:kutuku/views/login_screen.dart';
 import 'package:kutuku/views/not_found_screen.dart';
-import 'package:kutuku/views/onboarding_screen.dart';
 import 'package:kutuku/views/profile_screen.dart';
 import 'package:kutuku/views/signup.dart';
 
