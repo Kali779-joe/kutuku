@@ -159,7 +159,6 @@ class _SignupState extends State<Signup> {
                       controller: _usernameController,
                       validator: _validateUsername,
                       decoration: InputDecoration(
-                        labelText: 'Username',
                         suffixIcon: const Icon(Icons.account_box_rounded),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey),
@@ -191,7 +190,6 @@ class _SignupState extends State<Signup> {
                       controller: _emailController,
                       validator: _validateEmail,
                       decoration: InputDecoration(
-                        labelText: 'Email',
                         suffixIcon: const Icon(Icons.email),
                         focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey),
@@ -225,7 +223,6 @@ class _SignupState extends State<Signup> {
                       validator: _validatePassword,
                       obscureText: _obscurePassword,
                       decoration: InputDecoration(
-                        labelText: 'Password',
                         prefixIcon: const Icon(Icons.lock),
                         suffixIcon: IconButton(
                           icon: Icon(
@@ -268,7 +265,6 @@ class _SignupState extends State<Signup> {
                       validator: _validateConfirmPassword,
                       obscureText: _obscureConfirmPassword,
                       decoration: InputDecoration(
-                        labelText: 'Confirm Password',
                         prefixIcon: const Icon(Icons.lock_outline),
                         suffixIcon: IconButton(
                           icon: Icon(
@@ -320,6 +316,7 @@ class _SignupState extends State<Signup> {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           backgroundColor: Colors.indigo,
+                          foregroundColor: Colors.white,
                         ),
                         onPressed: _submittingSignupForm,
                         child: const Text(
@@ -327,7 +324,6 @@ class _SignupState extends State<Signup> {
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -348,7 +344,7 @@ class _SignupState extends State<Signup> {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
+                  color: Colors.grey.shade100,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -378,7 +374,7 @@ class _SignupState extends State<Signup> {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
+                  color: Colors.grey.shade100,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
