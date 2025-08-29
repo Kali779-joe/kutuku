@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class OnboardingPage extends StatelessWidget {
   /// Creates a new a instance[OnboardingPage]
@@ -19,48 +18,18 @@ class OnboardingPage extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(image, fit: BoxFit.cover, height: 400, width: 600),
-        const SizedBox(height: 10),
+        Image.asset(image, fit: BoxFit.cover, height: 500, width: 800),
+        SizedBox(height: 15),
         Text(
           title,
-          style: Theme.of(context).textTheme.headlineMedium,
-          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headlineSmall,
+          textAlign: TextAlign.start,
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 5),
         Text(
           description,
-          style: Theme.of(context).textTheme.bodyLarge,
-          textAlign: TextAlign.center,
-        ),
-
-        const SizedBox(height: 10),
-        SizedBox(
-          width: double.infinity,
-          height: 50,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.indigo,
-              foregroundColor: Colors.white,
-            ),
-            onPressed: () {
-              context.goNamed('signup');
-            },
-
-            child: Text(
-              'Create Account',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-            ),
-          ),
-        ),
-        SizedBox(height: 10, width: 10),
-        TextButton(
-          onPressed: () {
-            context.goNamed('login');
-          },
-          child: Text(
-            'Already Have an Account',
-            style: TextStyle(color: Colors.indigoAccent),
-          ),
+          style: Theme.of(context).textTheme.bodySmall,
+          textAlign: TextAlign.start,
         ),
       ],
     );
