@@ -2,20 +2,20 @@ import 'package:go_router/go_router.dart';
 import 'package:kutuku/Onboarding/onboarding_screen.dart';
 import 'package:kutuku/views/about_screen.dart';
 import 'package:kutuku/views/dashboard.dart';
-import 'package:kutuku/views/home_screen.dart';
+import 'package:kutuku/views/home_page.dart';
 import 'package:kutuku/views/login_screen.dart';
 import 'package:kutuku/views/not_found_screen.dart';
 import 'package:kutuku/views/profile_screen.dart';
 import 'package:kutuku/views/signup.dart';
 
 class AppRouter {
-  static const onboardingRoute = '/';
-  static const homeRoute = '/home';
+  static const homeRoute = '/';
   static const aboutRoute = '/about';
   static const profileRoute = '/profile';
   static const dashboardRoute = '/dashboard';
   static const loginRoute = '/login';
   static const signupRoute = '/signup';
+  static const onboardingRoute = '/onboarding';
 
   // ROUTES NAMES
   static const String login = 'login';

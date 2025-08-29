@@ -68,26 +68,37 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 total: onboardingData.length,
               ),
               const SizedBox(height: 20),
-              //next button
-              if (_currentPage == onboardingData.length - 1)
-                ElevatedButton(
+
+              const SizedBox(height: 5),
+              SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    foregroundColor: Colors.white,
+                  ),
                   onPressed: () {
-                    _finishOnboarding();
-                    context.go('/home');
+                    context.goNamed('signup');
                   },
-                  child: Text('Get started'),
-                )
-              else
-                TextButton(
-                  onPressed: () {
-                    _pageController.nextPage(
-                      duration: Duration(milliseconds: 300),
-                      curve: Curves.easeIn,
-                    );
-                  },
-                  child: Text('next'),
+
+                  child: Text(
+                    'Create Account',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
                 ),
-              const SizedBox(height: 20),
+              ),
+              SizedBox(height: 5, width: 10),
+              TextButton(
+                onPressed: () {
+                  _finishOnboarding();
+                  context.goNamed('login');
+                },
+                child: Text(
+                  'Already Have an Account',
+                  style: TextStyle(color: Colors.indigoAccent),
+                ),
+              ),
             ],
           ),
         ),
