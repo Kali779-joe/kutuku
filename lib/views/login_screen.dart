@@ -71,14 +71,14 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        automaticallyImplyLeading: true,
-        leading: IconButton(
-          onPressed: () {
-            context.pop();
-          },
-          icon: Icon(Icons.arrow_back_ios),
-        ),
+        automaticallyImplyLeading: false,
+        //leading: IconButton(
+        // onPressed: () {
+        //  context.pop();
+        //  },
+        // icon: Icon(Icons.arrow_back_ios),
       ),
+      //  ),
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),

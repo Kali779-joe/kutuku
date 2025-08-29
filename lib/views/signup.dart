@@ -109,16 +109,18 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            context.pop('onboarding');
-          },
+        automaticallyImplyLeading: false,
+        //leading: IconButton(
+        // onPressed: () {
+        //   context.pop('onboarding');
+        // },
 
-          icon: Icon(Icons.arrow_back_ios),
-        ),
+        //  icon: Icon(Icons.account_circle_rounded),
         title: const Text('Sign Up'),
         backgroundColor: Colors.transparent,
         elevation: 0,
+
+        //,
       ),
       body: SingleChildScrollView(
         child: Padding(
