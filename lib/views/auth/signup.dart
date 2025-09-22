@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kutuku/router/app_router.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -44,7 +45,7 @@ class _SignupState extends State<Signup> {
       print('Password: ${_passwordController.text}');
       print('username: ${_usernameController}');
       // Navigate to home or show success message
-      context.goNamed('Home');
+      context.goNamed(AppRouter.otp_screen);
     } else {
       print('Form validation failed');
     }
@@ -53,9 +54,9 @@ class _SignupState extends State<Signup> {
   // USERNAME VALIDATION:
   String? _validateUsername(String? value) {
     if (!_submitted) return null;
-    // validaate until form is submitted
+    // validate until form is submitted
     if (value == null || value.isEmpty) return "Input Username";
-    final usernameRegex = RegExp(r'^[/w]+$([/w-]+/.)+[/w-]{2,4}$');
+    final usernameRegex = RegExp(r'^[a-zA-Z0-9_]+$');
     if (!usernameRegex.hasMatch(value)) return 'Enter a valid Username';
     return null;
   }

@@ -2,13 +2,12 @@ final List<Map<String, String>> onboardingData = [
   {
     "title": "Various collection of the latest product",
     "description":
-        'From daily essentials to luxury items, and products from trusted sellers.',
+        'From daily essentials to luxury items,and products from trusted sellers.',
     "image": "assets/image/onboarding1.jpg",
   },
   {
     "title": 'Complete collections of colors and size',
-    "description":
-        "Discover every color and size you could ever want  all in one place.",
+    "description": "Discover every color and size you could ever want .",
     "image": "assets/image/onboarding2.jpg",
   },
   {

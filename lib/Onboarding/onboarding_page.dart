@@ -18,18 +18,27 @@ class OnboardingPage extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(image, fit: BoxFit.cover, height: 500, width: 800),
-        SizedBox(height: 15),
+        Image.asset(
+          image,
+          fit: BoxFit.cover,
+          height: MediaQuery.of(context).size.height * 0.4,
+          width: MediaQuery.of(context).size.width * 0.9,
+        ),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.04),
         Text(
           title,
-          style: Theme.of(context).textTheme.headlineSmall,
-          textAlign: TextAlign.start,
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+            fontSize: MediaQuery.of(context).size.width * 0.05,
+          ),
+          textAlign: TextAlign.center,
         ),
-        const SizedBox(height: 5),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.01),
         Text(
           description,
-          style: Theme.of(context).textTheme.bodySmall,
-          textAlign: TextAlign.start,
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+            fontSize: MediaQuery.of(context).size.width * 0.04,
+          ),
+          textAlign: TextAlign.center,
         ),
       ],
     );
