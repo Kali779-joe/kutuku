@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kutuku/router/app_router.dart';
+import 'package:kutuku/widget/forget_bottom_sheet.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -65,6 +66,26 @@ class _LoginScreenState extends State<LoginScreen> {
     if (value == null || value.isEmpty) return "Password is required";
     if (value.length < 8) return "Password must be at least 8 characters";
     return null; // Basic validation for login
+  }
+
+  void _showForgetDialog() {
+    final parentContext = context;
+    showModalBottomSheet(
+      context: context,
+      isDismissible: false,
+      enableDrag: false,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (sheetContext) {
+        return ForgetBottomSheet(
+          onContinue: () {
+            context.pop();
+            context.goNamed(AppRouter.signup);
+          },
+        );
+      },
+    );
   }
 
   @override
