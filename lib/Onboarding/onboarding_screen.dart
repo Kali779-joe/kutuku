@@ -31,9 +31,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20.0),
+          padding: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * 0.06,
+            vertical: MediaQuery.of(context).size.height * 0.01,
+          ),
           child: Column(
             children: [
               Align(
@@ -46,7 +50,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
               //PageView
-              Expanded(
+              Flexible(
                 child: PageView.builder(
                   onPageChanged: _onPageChange,
                   controller: _pageController,
@@ -67,27 +71,49 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
                 total: onboardingData.length,
               ),
-              const SizedBox(height: 20),
-              //next button
-              if (_currentPage == onboardingData.length - 1)
-                ElevatedButton(
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+              SizedBox(
+                width: double.infinity,
+                height: MediaQuery.of(context).size.height * 0.07,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    foregroundColor: Colors.white,
+                    textStyle: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width * 0.045,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
                   onPressed: () {
-                    _finishOnboarding();
-                    context.go('/home');
+                    context.goNamed('signup');
                   },
-                  child: Text('Get started'),
-                )
-              else
-                TextButton(
-                  onPressed: () {
-                    _pageController.nextPage(
-                      duration: Duration(milliseconds: 300),
-                      curve: Curves.easeIn,
-                    );
-                  },
-                  child: Text('next'),
+
+                  child: Text(
+                    'Create Account',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: MediaQuery.of(context).size.width * 0.04,
+                    ),
+                  ),
                 ),
-              const SizedBox(height: 20),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+              TextButton(
+                onPressed: () {
+                  _finishOnboarding();
+                  context.goNamed('login');
+                },
+                child: Text(
+                  'Already Have an Account',
+                  style: TextStyle(
+                    color: Colors.indigoAccent,
+                    fontWeight: FontWeight.bold,
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
