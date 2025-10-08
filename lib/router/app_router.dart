@@ -1,21 +1,23 @@
 import 'package:go_router/go_router.dart';
+import 'package:kutuku/Onboarding/onboarding_screen.dart';
 import 'package:kutuku/views/about_screen.dart';
+import 'package:kutuku/views/auth/login_screen.dart';
+import 'package:kutuku/views/auth/signup.dart';
+import 'package:kutuku/views/auth/verification_screen.dart';
 import 'package:kutuku/views/dashboard.dart';
-import 'package:kutuku/views/home_screen.dart';
-import 'package:kutuku/views/login_screen.dart';
+import 'package:kutuku/views/home_page.dart';
 import 'package:kutuku/views/not_found_screen.dart';
-import 'package:kutuku/views/onboarding_screen.dart';
 import 'package:kutuku/views/profile_screen.dart';
-import 'package:kutuku/views/signup.dart';
 
 class AppRouter {
-  static const onboardingRoute = '/';
   static const homeRoute = '/home';
   static const aboutRoute = '/about';
   static const profileRoute = '/profile';
   static const dashboardRoute = '/dashboard';
   static const loginRoute = '/login';
   static const signupRoute = '/signup';
+  static const onboardingRoute = '/';
+  static const otp = '/otp';
 
   // ROUTES NAMES
   static const String login = 'login';
@@ -25,6 +27,7 @@ class AppRouter {
   static const String dashboard = 'dashboard';
   static const String onboarding = 'onboarding';
   static const String signup = 'signup';
+  static const String otp_screen = 'otp';
 }
 
 final GoRouter appRouter = GoRouter(
@@ -65,6 +68,11 @@ final GoRouter appRouter = GoRouter(
       path: AppRouter.signupRoute,
       name: AppRouter.signup,
       builder: (context, state) => const Signup(),
+    ),
+    GoRoute(
+      path: AppRouter.otp,
+      name: AppRouter.otp_screen,
+      builder: (context, state) => const VerificationScreen(),
     ),
   ],
 );
