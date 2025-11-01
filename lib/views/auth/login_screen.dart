@@ -36,7 +36,6 @@ class _LoginScreenState extends State<LoginScreen> {
     if (_formkey.currentState != null && _formkey.currentState!.validate()) {
       print('Email: ${_emailController.text}');
       print('Password: ${_passwordController.text}');
-      context.goNamed('Home');
     } else {
       print('Form validation failed');
     }
@@ -70,16 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        leading: IconButton(
-          onPressed: () {
-            context.pop();
           },
-          icon: Icon(Icons.arrow_back_ios),
-        ),
-      ),
-      body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Column(
@@ -182,7 +172,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           onPressed: _togglePasswordVisibility,
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey[400]!),
                         ),
                         hintText: 'Enter your password',
                         fillColor: Colors.grey[200],
@@ -227,7 +216,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           onPressed: _submittingLoginForm,
                           child: const Text(
-                            'LOGIN',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
@@ -252,10 +240,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               const SizedBox(height: 15),
-              Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -267,9 +253,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 40,
                     ),
                     const SizedBox(width: 10),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
                         'Sign in with Google',
                         style: TextStyle(
                           color: Colors.black,
@@ -277,15 +260,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                    ),
                   ],
                 ),
               ),
               const SizedBox(height: 10),
-              Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -297,9 +277,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 40,
                     ),
                     const SizedBox(width: 10),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
                         'Sign in with facebook',
                         style: TextStyle(
                           color: Colors.black,
@@ -311,7 +288,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-            ],
           ),
         ),
       ),

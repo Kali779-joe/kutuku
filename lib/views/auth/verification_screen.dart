@@ -129,12 +129,13 @@ class _VerificationScreenState extends State<VerificationScreen> {
             if (index > 0) {
               _focusNode[index - 1].requestFocus();
             }
+            setState(() {});
           }
-          setState(() {});
-        },
-        onSubmitted: (_) {
-          // if they press keyboard's submit button on last field , try verify
-          if (_currentPin.length == pintLength) _verifyPin();
+          onSubmitted:
+          (_) {
+            // if they press keyboard's submit button on last field , try verify
+            if (_currentPin.length == pintLength) _verifyPin();
+          };
         },
         decoration: InputDecoration(
           counterText: '',
